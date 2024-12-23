@@ -1,0 +1,65 @@
+-----Binary search----
+
+-> Binary search is an alago which is applicable only for the sorted algorithms.
+
+-> Every time it divides the arrays into two halves.
+
+-> It reduces the search spaces.
+
+-> It performs the same algorithm on the splitted halves of the arrays.
+
+-> [3, 4, 6, 7, 9, 12, 15, 16, 17]         n = 8(target)
+    0  1  2  3  4   5   6   7   8  
+    ^                           ^
+    |                           |
+   Low                         High
+
+
+               low + High
+    mid =     -------------
+                   2
+
+
+    mid =  (0 + 8) / 2  = 4
+
+
+    arrays[4]  = 9
+
+    target is less than < array[mid]
+
+    so left half is considered
+
+    [3, 4, 6, 7]
+     0  1  2  3
+     ^        ^
+     |        |
+    Low      High
+
+    Again mid is calculated
+
+    mid = (0 + 3) / 2 = 1
+
+    array[mid] = 4 and target is > mid 
+
+    so right side is considered
+
+    [6, 7]
+     2  3
+
+    low = 2
+    high = 3
+    mid = (2+3) / 2 = 2
+
+    array[mid] = 6 < target
+
+    again right side is considered
+
+    [7]
+
+    hence low = high = 3
+
+-> searched element is found in index 3.
+
+
+Time complexity is O(log(n) of base 2)
+
